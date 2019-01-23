@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide up and down</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(
+				function(){
+					$(".box").mouseenter(
+							function(){$(".menu").slideDown(1000)}
+						)
+					$(".box").mouseleave(
+							function(){$(".menu").slideUp()}
+						)
+					$("#bt1").click(
+							function(){
+								$("ol").prepend("<li>New Item</li>")
+							}
+						)
+					$("#bt2").click(
+							function(){
+								$("ol").append("<li>New Item</li>")
+							}
+						)
+				}
+			);
+	</script>
+ <style>
+ 	.box{
+ 		width: 40%;
+ 		background-color: blue;
+ 	}
+ 	.menu{
+ 		width: 40%;
+ 		background-color: green;
+ 		display: none;
+ 	}
+</style>
+
+</head>
+<body>
+<div class = "box">MENU </div>
+<div class = "menu">
+	<ul>
+		<li>Item1</li>
+		<li>Item2</li>
+		<li>Item3</li>
+		<li>Item4</li>
+	</ul>
+</div>
+<ol>
+	<li>Item1</li>
+	<li>Item2</li>
+</ol>
+<button id = "bt1">ADD to end</button>
+<button id = "bt2">ADD to Start</button>
+</body>
+</html>

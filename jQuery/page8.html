@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complement</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function fun(){
+			$.get("page9.jsp",
+
+					{
+						str1 : document.getElementById("str1").value ,
+						str2 : document.getElementById("str2").value
+					}
+					,
+					function (res , stat){
+						$("p").append(res);
+					}
+				);
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="str1">
+	<input type="text" id="str2">
+	<br><br><br>
+	<button onclick="fun()">find</button>
+	<br>
+	<p></p>
+</body>
+</html>

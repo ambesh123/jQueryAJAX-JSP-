@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<script >
+	$(document).ready(
+		function(){
+			$("p").click(
+					function(){$(this).hide()}
+				)
+			$(".dare").mouseenter(
+					function(){alert("How dare you ??")}
+				)
+			$(".naughty").mouseenter(
+					function(){
+						$(this).hide()
+					}
+				)
+			$(".naughty").mouseleave(
+					function(){
+						$(this).show();
+					}
+				)
+		}
+		);
+</script>
+<body>
+	<p>Click me to HIDE ME</p>
+	<p>Me too </p>
+	<p class = "dare"> Dare to point at me </p>
+	<p class = "naughty">I am too Naughty</p>
+</body>
+</html>
